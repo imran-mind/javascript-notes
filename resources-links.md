@@ -1,5 +1,5 @@
   Pushkar Krishna
-https://github.com/imran-mind/javascript-notes.git
+https://github.com/pushkar100/javascript-notes
 
 Sarah 
 https://github.com/sdras
