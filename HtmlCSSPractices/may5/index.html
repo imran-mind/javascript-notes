@@ -9,117 +9,131 @@
             padding: 0px;
         }
 
-        .meal-box {
-            padding: 25px;
-            width: 25%;
-        }
-
         .wrapper {
             font-family: ProximaNova, Arial, Helvetica Neue, sans-serif;
             width: 100%;
+            height: 250px;
+            background-color: #171a29;
+            margin-top: 8%;
         }
 
-        .meal-img {
-            width: 100%;
-            height: auto;
+        .main-div {
+            display: flex;
         }
 
-        .meal-img img {
-            width: 100%;
+        .img-div {
+            width: 21%;
             height: auto;
+            padding: 3%;
+        }
+
+        .img-div img {
+            width: 100%;
         }
 
         .meal-title {
-            font-weight: 500;
+            font-weight: 300;
+            font-size: 32px;
+            max-width: 538px;
+            color: white;
         }
 
-        .meal-types {
-            font-size: small;
-            color: #686b78;
-            margin-top: 4px;
+        .right-div {
+            margin-top: 27px;
+            margin-left: 27px;
+            width: 310px;
         }
-
-        .meal-info {
+        .meal-name{
+            text-overflow: ellipsis;
+            font-size: 15px;
+            max-width: 538px;
+            color: gray;
+            margin-top:7px;
+        }
+        .meal-status{
             display: flex;
-            justify-content: space-between;
-            font-size: small;
-            color: #686b78;
             margin-top: 18px;
-            /* width: 35%; */
+            justify-content: space-between;
         }
 
-        .meal-discount {
-            border-top: 1px solid #e9e9eb;
-            /* width: 35%; */
-            color: #8a584b;
-            margin-top: 12px;
-            margin-bottom: 12px;
-            padding-top: 14px;
-            margin-top: 14px;
-        }
-
-        .quick-view {
-            border-top: 1px solid #e9e9eb;
-            padding-top: 14px;
-            text-align: center;
-            color: #686b78;
+        .star-rating{
             font-weight: 600;
+            font-size: 16px;
+            color:white
         }
-
-        .rating {
-            background-color: #db7c38;
-            color: #fff;
-            height: 17px;
-            width: 33px;
-            padding-left: 5px;
+        .number-rating{
+            color: gray;
             font-weight: 400;
+            font-size: 12px;
+            margin-top:5px;
         }
-        .wrapper{
-            display: flex;
+        .minutes{
+            border-right: 1px solid hsla(0,0%,100%,.2);
+            padding-right:18px;
+        }
+        .rating{
+            border-right: 1px solid hsla(0,0%,100%,.2);
+            padding-right:18px;
         }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- <div class="meal-box">
-            <div class="meal-img">
-                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wiv385eix5pfmvd1umfv"
-                    alt="No Image Found" />
+        <div class="main-div">
+            <div class="img-div">
+                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vb1fpkpgvxxq3iktndse"
+                    alt="" />
             </div>
-            <div class="meal-title">
-                Onesta
-            </div>
-            <div class="meal-types">
-                Italian, Deseret, Pizzas
-            </div>
-            <div class="meal-info">
-                <div class="rating">
-                    <span> * </span>
-                    <span>3.6</span>
+            <div class="right-div">
+                <div class="meal-title">
+                    Kanti Sweets
                 </div>
-                <div>
-                    .
+                <div class="meal-name">
+                    Desserts
                 </div>
-                <div>
-                    35 MINS
+                <div class="meal-name">
+                    Bannerghatta, Arekere | Change Outlet
                 </div>
-                <div>
-                    .
-                </div>
-                <div>
-                    $200 FOR TWO
+                <div class="meal-status">
+                    <div class="rating">
+                        <div class="star-rating">
+                            <span>*</span>
+                            <span>4.5</span>
+                        </div>
+
+                        <div class="number-rating">
+                            <span>
+                                100+ Rating
+                            </span>
+                        </div>
+                    </div>
+                    <div class="minutes">
+                        <div class="star-rating">
+                            <span>40 mins</span>
+                        </div>
+                        <div class="number-rating">
+                            <span>Delivery Time</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <div class="star-rating">
+                            <span>₹ 100</span>
+                        </div>
+                        <div class="number-rating">
+                            <span>
+                                Cost for two
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="meal-discount">
-                <span class="sNAfh">Free Budweiser Non-Alcoholic drink-330ml Tin on orders above ₹250</span>
-            </div>
-            <div class="quick-view">
-                Quick View
-            </div>
-        </div> -->
+        </div>
     </div>
-    <script src="index.js"></script>
+    <div class="test">
+            Test
+        </div>
+    <script src="index.js"/>
 </body>
 
 </html>
