@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Hover Example</title>
+    <style>
+        .wrapper {
+            border: 1px solid gray;
+            width: 200px;
+            margin-left: 40px;
+            transition: all .2s ease-in-out;
+        }
+
+        .wrapper:hover {
+            transform: scale(1.1);
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            /* Firefox 3.5 - 3.6 */
+            box-shadow: 3px 3px 5px 6px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <h1>Hello Hower</h1>
+            <p>Hello how are you</p>
+        </div>
+    </div>
+</body>
+<script>
+    const div = document.querySelector('.wrapper');
+    div.addEventListener('mouseover', () => {
+        console.log('on hover')
+    })
+</script>
+
+</html>
