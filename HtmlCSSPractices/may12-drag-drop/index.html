@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag&Drop</title>
+    <style>
+        #drop-container div,
+        #drag-container div{
+            display: flex;
+            width: 130px;
+            height: 130px;
+            margin: 10px;
+        }
+
+        #drag-container{
+            display: flex;
+        }
+        #drop-container{
+            margin-top: 15px;
+            display: flex
+        }
+        #drop-container div{
+            border: 1px solid #ccc;
+        }
+        #drop-container div.drop-select{
+            border: 1px dashed red;
+        }
+        .image-1{
+            background: url('./image-1.jpg');
+        }
+        .image-2{
+            background: url('./image-2.jpg');
+        }
+        .dragging{
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="drag-container">
+        <div data-image="image-1" draggable="true" class="image-1"></div>
+        <div data-image="image-2" draggable="true" class="image-2"></div>
+    </section>
+
+    <section id="drop-container">
+        <div></div>
+        <div></div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
