@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced CSS Selector(nth-child,first-of-type) </title>
+</head>
+<style>
+    li.foo ~ li {
+        color: red;
+    }
+</style>
+
+<!-- 
+Source=> https://www.youtube.com/watch?v=7_p535hn0go&list=PLxnSeqQVewBP8KNk3AJT9eOU_4w0y6HKz&index=4
+Shoiab Bhimani
+1. nth-child(3n) => It means select every 3rd li and apply the class
+    li: nth-child(3n){
+        color: red
+    }
+
+2. nth-child(3n+2)=> It means that It will create group of 3 elements and select 2nd of that
+    li: nth-child(3n+1){
+        color: red
+    }
+
+3. li: first-type{
+    color: red
+    }
+    It means select first li element and apply color: red, In this case if some othe element will come 
+    in between like span or div than it won't work
+
+4. li: first-of-type{
+     color: red
+    }
+    It means select first li element irrespective of any element will come in between like span or div
+
+5. Forward sibling selector ~
+    li.foo ~ li {
+        color: red;
+    }
+
+    if we want to select from perticuler position liek second or third then from there we have 
+    to add class and apply forward sibling selector like above
+ -->
+<body>
+    <div>
+        <ul>
+            <span>asdjflsjdflaslfjkl</span>
+            <span>asdjflsjdflaslfjkl</span>
+            <span>asdjflsjdflaslfjkl</span>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li class="foo">Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+        </ul>
+    </div>    
+</body>
+</html>
