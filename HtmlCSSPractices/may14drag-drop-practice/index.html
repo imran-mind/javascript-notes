@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .drag-section div{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .drop-section div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid gray;
+        margin: 10px;
+    }
+    .drag-section {
+        display: flex
+    }
+    .drop-section{
+        display: flex
+    }
+    .image-1{
+        background: url('./image-1.jpg');
+    }
+    .image-2{
+        background: url('./image-2.jpg');
+    }
+    .dragging{
+        opacity: 0.2;
+    }
+
+    .drop-section div.dropping {
+        border: 1px dashed red
+    }
+</style>
+
+<body>
+    <section class="drag-section">
+        <div data-image="image-1" draggable="true" class="image-1">
+        </div>
+        <div data-image="image-2" draggable="true" class="image-2">
+        </div>
+    </section>
+
+    <section class="drop-section">
+        <div>
+        </div>
+        <div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
