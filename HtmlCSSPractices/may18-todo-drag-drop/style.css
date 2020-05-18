@@ -59,22 +59,35 @@ body {
 .todo-items ul,
 .inprogress-items ul,
 .done-items ul {
+    /* margin-top: 40px; */
     list-style: none;
-    padding: 10%;
 }
+
+.todo-items ul li:nth-child(odd) ,
+.inprogress-items ul li:nth-child(odd) ,
+.done-items ul li:nth-child(odd) {
+    padding: 10px;
+    background-color: #EFEEF2;
+    margin: 5px;
+    border-radius: 7px;
+}
+
 
 .todo-items ul li:nth-child(even) ,
 .inprogress-items ul li:nth-child(even) ,
 .done-items ul li:nth-child(even) {
     padding: 10px;
-    background-color: gray
+    background-color: lightgrey;
+    margin: 5px;
+    border-radius: 7px;
 }
 
 .todo-items,
 .inprogress-items,
 .done-items {
     height: 400px;
-    border: 1px solid gray;
+    border: 1px solid #EFEEF2;
+    border-radius: 20px;
     width: 30%;
     overflow-y: auto
 }
