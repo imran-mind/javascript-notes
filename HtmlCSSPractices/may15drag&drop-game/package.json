@@ -1,0 +1,16 @@
+{
+  "name": "game-drag-drop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve index.html",
+    "build": "parcel build index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.random": "^3.2.0",
+    "lodash.shuffle": "^4.2.0"
+  }
+}

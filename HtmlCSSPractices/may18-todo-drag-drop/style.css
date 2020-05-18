@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* .todo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center
+} */
+
+/* input box div */
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input box */
+.input-box input {
+    font-size: 15px;
+    margin-top: 3%;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    border-style: none;
+    border: 1px solid #DDDDDD;
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.todo-wrapper {
+    /* border: 1px solid gray; */
+    /* height: auto; */
+    width: 70%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.todo-items h3,
+.inprogress-items h3,
+.done-items h3 {
+    padding: 10px;
+}
+
+.todo-items ul,
+.inprogress-items ul,
+.done-items ul {
+    list-style: none;
+    padding: 10%;
+}
+
+.todo-items ul li:nth-child(even) ,
+.inprogress-items ul li:nth-child(even) ,
+.done-items ul li:nth-child(even) {
+    padding: 10px;
+    background-color: gray
+}
+
+.todo-items,
+.inprogress-items,
+.done-items {
+    height: 400px;
+    border: 1px solid gray;
+    width: 30%;
+    overflow-y: auto
+}
