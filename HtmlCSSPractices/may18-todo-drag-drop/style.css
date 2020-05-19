@@ -63,21 +63,23 @@ body {
     list-style: none;
 }
 
-.todo-items ul li:nth-child(odd) ,
-.inprogress-items ul li:nth-child(odd) ,
+.todo-items ul li:nth-child(odd),
+.inprogress-items ul li:nth-child(odd),
 .done-items ul li:nth-child(odd) {
     padding: 10px;
-    background-color: #EFEEF2;
+    /* background-color: #EFEEF2; */
+    background-color: #00BD4D;
     margin: 5px;
     border-radius: 7px;
 }
 
 
-.todo-items ul li:nth-child(even) ,
-.inprogress-items ul li:nth-child(even) ,
+.todo-items ul li:nth-child(even),
+.inprogress-items ul li:nth-child(even),
 .done-items ul li:nth-child(even) {
     padding: 10px;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
+    background-color: #00BD4D;
     margin: 5px;
     border-radius: 7px;
 }
@@ -90,4 +92,45 @@ body {
     border-radius: 20px;
     width: 30%;
     overflow-y: auto
+}
+
+.dragging {
+    opacity: 0.2;
+}
+
+.todo-li {
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.todo-li button {
+    padding: 3px;
+    margin: 2px;
+    border-radius: 4px;
+    border-style: none;
+}
+
+.open-item{
+    background-color: #00BD4D;
+    margin: 5px;
+    padding: 3px;
+    height: 25px;
+}
+
+
+.todo-items div,
+.inprogress-items div,
+.done-items div{
+    margin: 5px;
+    padding: 3px;
+    height: 25px;
+    border: 1px solid black
+}
+
+.drag-select {
+    border: 2px dashed orange !important
 }

@@ -31,14 +31,14 @@ for(let i=0; i< shuffleWord.length; i++){
     dragContainer.appendChild(dragItem);
 
     // dragstart
-    dragItem.addEventListener('touchstart',(event)=>{
+    dragItem.addEventListener('dragstart',(event)=>{
         event.dataTransfer.effectAllowed = 'move';
         dragItem.classList.add('dragging');
         event.dataTransfer.setData('text/plain',currentChar);
     })
 
     // dragend
-    dragItem.addEventListener('touchend',()=>{
+    dragItem.addEventListener('dragend',()=>{
         dragItem.classList.remove('dragging');
     })
 
@@ -47,18 +47,18 @@ for(let i=0; i< shuffleWord.length; i++){
     dropContainer.appendChild(dropItem);
 
     // dragenter
-    dropItem.addEventListener('touchenter',()=>{
+    dropItem.addEventListener('dragenter',()=>{
         dropItem.classList.add('drag-select');
         event.dataTransfer.dropEffect= 'move';
     });
     
     // dragleave
-    dropItem.addEventListener('touchleave',()=>{
+    dropItem.addEventListener('dragleave',()=>{
         dropItem.classList.remove('drag-select');
     });
 
     //dragover
-    dropItem.addEventListener('touchover',(event)=>{
+    dropItem.addEventListener('dragover',(event)=>{
         event.preventDefault();
     })
 
