@@ -6,6 +6,10 @@ const todos = [{
     id: 2,
     text: 'Practice CSS',
     status: 'OPEN'
+},{
+    id: 3,
+    text: 'Learn Deno',
+    status: 'IN_PROGRESS'
 }]
 const OPEN = 'OPEN';
 const PROGRESS = 'IN_PROGRESS';
@@ -39,110 +43,106 @@ const createOpenList = (item) => {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('open-item');
     todoDiv.innerHTML = item.text;
-    
+
+    // dragging
     todoDiv.setAttribute('draggable', true);
-    todoDiv.setAttribute('data-id',item.id);
+    todoDiv.setAttribute('data-id', item.id);
 
     todoDiv.addEventListener('dragstart', () => {
         todoDiv.classList.add('dragging');
         event.dataTransfer.effectAllowed = 'move';
-        event.dataTransfer.setData('text/plain',JSON.stringify(item));
+        event.dataTransfer.setData('text/plain', JSON.stringify(item));
     });
 
     todoDiv.addEventListener('dragend', (event) => {
         todoDiv.classList.remove('dragging');
         todoDiv.style.display = 'none';
-        event.dataTransfer.dropEffect= 'move';
+        event.dataTransfer.dropEffect = 'move';
     });
     openDivs.appendChild(todoDiv);
 
-    // const li = document.createElement('li');
-    // const editBtn = document.createElement('button');
+    //dropping
 
-    // const divBtns = document.createElement('div');
-    // editBtn.innerHTML = "Edit";
-    // const delBtn = document.createElement('button');
-    // delBtn.innerHTML = "Del";
-    // divBtns.appendChild(editBtn);
-    // divBtns.appendChild(delBtn);
-
-    // li.innerHTML = item.text;
-    // li.appendChild(divBtns);
-    // li.classList.add('todo-li');
-
-    // li.setAttribute('draggable', true);
-    // li.addEventListener('dragstart', () => {
-    //     li.classList.add('dragging');
-    // });
-
-    // li.addEventListener('dragend', () => {
-    //     li.classList.remove('dragging');
-    // });
-    // openUL.appendChild(li);
 }
 
 const progressDivs = document.querySelector('.inprogress-items');
 
-const createInProgressList = () => {
+const createInProgressList = (todo) => {
     const inprogressDiv = document.createElement('div');
+    inprogressDiv.classList.add('open-item');
+    inprogressDiv.innerHTML = todo.text;
 
-    inprogressDiv.addEventListener('dragenter',(event)=>{
-        console.log('drag enter inprgoress',event.target);
+    console.log(inprogressDiv)
+
+    progressDivs.appendChild(inprogressDiv);
+    //dropping
+    inprogressDiv.addEventListener('dragenter', (event) => {
+        console.log('drag enter inprgoress', event.target);
         event.target.classList.add('drag-select');
-        event.dataTransfer.dropEffect= 'move';
+        event.dataTransfer.dropEffect = 'move';
     });
 
-    inprogressDiv.addEventListener('dragleave',(event)=>{
+    inprogressDiv.addEventListener('dragleave', (event) => {
         console.log('dragleave inprogress');
         event.target.classList.remove('drag-select');
     });
 
-    inprogressDiv.addEventListener('dragover',()=>{
+    inprogressDiv.addEventListener('dragover', () => {
         console.log('dragover inprogress');
         event.preventDefault();
     });
 
-    inprogressDiv.addEventListener('drop',(event)=>{
+    inprogressDiv.addEventListener('drop', (event) => {
         event.target.classList.remove('drag-select');
         const data = JSON.parse(event.dataTransfer.getData('text/plain'));
-        const foundIndex = todos.findIndex((d)=> d.id ==data.id);
-        
+        const foundIndex = todos.findIndex((d) => d.id == data.id);
+
         const localList = todos;
-        localList.splice(foundIndex,1);
-        
+        localList.splice(foundIndex, 1);
+
         data.status = PROGRESS;
         todos.push(data);
-        
+
         event.target.innerHTML = data.text;
         event.target.classList.add('open-item');
-        console.log('drop inprgoress',todos,data);
+        console.log('drop inprgoress', todos, data);
     });
-    progressDivs.appendChild(inprogressDiv);
-    // const progressLI = document.createElement('li');
-    // progressUL.appendChild(progressLI);
-    // progressLI.addEventListener('dragenter', (event) => {
-    //     console.log('drag enter todo')
-    // });
+    
+
+    //dragging
+    inprogressDiv.setAttribute('draggable', true);
+    inprogressDiv.setAttribute('data-id', todo.id);
+
+    inprogressDiv.addEventListener('dragstart',(event)=>{
+        console.log('********dragstart********')
+        event.dataTransfer.effectAllowed = 'move';
+        console.log(' inprogress data transfer : ',event.dataTransfer.getData('text/plain'))
+        event.dataTransfer.setData('text/plain', event.dataTransfer.getData('text/plain'));
+    });
+
+    inprogressDiv.addEventListener('dragend',(event)=>{
+        event.dataTransfer.effectAllowed = 'move';
+    });
 }
 
 const doneDivs = document.querySelector('.done-items');
 const createCompletedList = () => {
     const doneDiv = document.createElement('div');
 
-    doneDiv.addEventListener('dragenter',(event)=>{
+    doneDiv.addEventListener('dragenter', (event) => {
         console.log('drag enter doneDiv')
     });
 
-    doneDiv.addEventListener('dragleave',(event)=>{
+    doneDiv.addEventListener('dragleave', (event) => {
         console.log('dragleave doneDiv');
     })
 
-    doneDiv.addEventListener('dragover',()=>{
+    doneDiv.addEventListener('dragover', () => {
         console.log('dragover doneDiv');
         event.preventDefault();
     });
 
-    doneDiv.addEventListener('drop',()=>{
+    doneDiv.addEventListener('drop', () => {
         console.log('drop doneDiv');
     })
     doneDivs.appendChild(doneDiv);
@@ -155,18 +155,17 @@ const handleTodoList = () => {
         // createOpenList(todo);
         // createInProgressList(todo);
         // createCompletedList(todo);
-        // switch (todo.status) {
-
-        //     case OPEN:
-        //         createOpenList(todo);
-        //         break;
-        //     case PROGRESS:
-        //         createInProgressList(todo);
-        //         break;
-        //     case DONE:
-        //         createCompletedList(todo);
-        //         break;
-        // }
+        switch (todo.status) {
+            case OPEN:
+                createOpenList(todo);
+                break;
+            case PROGRESS:
+                createInProgressList(todo);
+                break;
+            case DONE:
+                createCompletedList(todo);
+                break;
+        }
     });
 }
 
