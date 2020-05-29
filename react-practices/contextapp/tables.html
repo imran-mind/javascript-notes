@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Country</th>
+                    <th>Language</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>Dove shampoo intensive repair</td>
+                </tr>
+                <tr>
+                    <td>100ml</td>
+                    <td>UK</td>
+                    <td>English</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>100ml</td>
+                    <td>UK</td>
+                    <td>English</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>Dove asf shampoo intensive repair</td>
+                </tr>
+                <tr>
+                    <td>100ml</td>
+                    <td>UK</td>
+                    <td>English</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>100ml</td>
+                    <td>UK</td>
+                    <td>English</td>
+                    <td>Open</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        const table = document.getElementsByTagName('tbody');
+        console.log(table)
+        // let data;
+
+        const createTable = (data) => {
+            let parentChilds = '';
+            data && data.forEach((item) => {
+                let isParent = true;
+                let childCount = item.childs.length - 1;
+                item.childs.forEach((child, index) => {
+                    const childRow = getParentChilds(child, item.parent, isParent);
+                    parentChilds = parentChilds + childRow;
+                    table[0].innerHTML = parentChilds;
+                    if (childCount != index) {
+                        isParent = false;
+                    } else {
+                        isParent = true;
+                    }
+                });
+            });
+        }
+
+        const getParentChilds = (child, parent, isFirstRow) => {
+            const parentRow = `<tr>
+                    <td>${parent}</td>
+                </tr>`;
+            return `
+                ${isFirstRow ? parentRow : ''}
+                <tr>
+                    <td>${child.size}</td>
+                    <td>${child.country}</td>
+                    <td>${child.language}</td>
+                    <td>${child.status}</td>
+                </tr>
+                `;
+        }
+
+        window.addEventListener('DOMContentLoaded', async (event) => {
+            const data = [{
+                "parent": "Dove shampoo intensive repair",
+                "childs": [
+                    {
+                        "size": "100ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    },
+                    {
+                        "size": "100ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    },
+                    {
+                        "size": "100ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    }
+                ]
+            },
+            {
+                "parent": "Dove Conditioner intensive repair",
+                "childs": [
+                    {
+                        "size": "300ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    },
+                    {
+                        "size": "400ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    },
+                    {
+                        "size": "500ml",
+                        "country": "UK",
+                        "language": "english",
+                        "status": "open"
+                    }
+                ]
+            }
+            ];
+            createTable(data);
+        });
+
+    </script>
+</body>
+
+</html>
