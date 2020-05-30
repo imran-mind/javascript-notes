@@ -9,7 +9,7 @@ class Book {
 //UI Class: Handle UI Task
 class UI {
     static displayBooks() {
-        const StoredBooks =Store.getBooks();
+        const StoredBooks = Store.getBooks();
         const books = StoredBooks;
         books.forEach((book) => {
             UI.addBookToList(book);
@@ -110,7 +110,6 @@ form.addEventListener('submit', (e) => {
     } else {
         //Instantiate a book
         const newBook = new Book(title, author, isbn);
-
         //Add Book to UI
         UI.addBookToList(newBook);
  
@@ -137,3 +136,6 @@ bookList.addEventListener('click', (e) => {
 
     UI.showAlert('Book Deleted ','success');
 })
+
+// rocket singh
+// 
