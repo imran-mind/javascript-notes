@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weight Convert</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+
+    <style>
+        body {
+            margin-top: 70px;
+            background: #333;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4 text-center">
+                    Weight Convertor
+                </h1>
+
+                <form>
+                    <div class="form-group">
+                        <input id="lbsInput" type="number" placeholder="Enter Pounds.."
+                            class="form-control form-control-lg" />
+                    </div>
+                </form>
+
+                <div id="output">
+                    <div>
+                        <div class="card-block">
+                            <h4>Grams:</h4>
+                            <div id="gramsOutput"></div>
+                        </div>
+                    </div>
+
+                    <div >
+                        <div class="card-block">
+                            <h4>Kilograms:</h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card-block">
+                            <h4>Ounces:</h4>
+                            <div id="ozOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById('output')
+        .style.visibility = 'hidden';
+
+    document.getElementById('lbsInput')
+        .addEventListener('input',(e)=>{
+            document.getElementById('output').style.visibility = 'visible';
+            let lbs= e.target.value;
+        document.getElementById('gramsOutput')
+            .innerHTML = lbs/0.0022046;
+
+        document.getElementById('kgOutput')
+            .innerHTML = lbs/2.2046;
+        
+        document.getElementById('ozOutput')
+            .innerHTML = lbs*16;
+        })
+</script>
+</html>
