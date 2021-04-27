@@ -65,3 +65,22 @@ for(let i=0; i<5; i++){
 // 2: {message: "message_4", code: 4}
 // 3: {message: "message_4", code: 4}
 // 4: {message: "message_4", code: 4}
+
+
+// ----
+
+setTimeout(() => {
+    console.log(1);
+  }, 0);
+  Promise.resolve(1).then(() => {
+    console.log(2);
+  });
+  console.log(3);
+
+//   output 
+/* 
+3
+2
+1
+
+*/
