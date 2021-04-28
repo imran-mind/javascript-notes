@@ -1,11 +1,11 @@
-The Constructor Pattern
+/* The Constructor Pattern
 In classical object-oriented programming languages, a constructor is a special method used to initialize a newly created object once memory has been allocated for it. In JavaScript, as almost everything is an object, we're most often interested in object constructors.
 
 Object constructors are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
 
 Object Creation
 
-The three common ways to create new objects in JavaScript are as follows:
+The three common ways to create new objects in JavaScript are as follows: */
 
 // Each of the following options will create a new empty object:
  
@@ -18,10 +18,9 @@ var newObject = Object.create( Object.prototype );
 var newObject = new Object();
 
 
+/* Where the "Object" constructor in the final example creates an object wrapper for a specific value, or where no value is passed, it will create an empty object and return it.
 
-Where the "Object" constructor in the final example creates an object wrapper for a specific value, or where no value is passed, it will create an empty object and return it.
-
-There are then four ways in which keys and values can then be assigned to an object:
+There are then four ways in which keys and values can then be assigned to an object: */
 
 
 // ECMAScript 3 compatible approaches
