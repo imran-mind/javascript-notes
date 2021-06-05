@@ -35,20 +35,20 @@ document.addEventListener('DOMContentLoaded', (params)=> {
 			if(type == 'reply') {
 				let inputElem = `
 					<li id="input-${abc}">
-					<div class="comment-input-row">
-						<div>
-							<input type="text" placeholder="Name" id="name-${abc}" class="name-handle" />
+						<div class="comment-input-row">
+							<div>
+								<input type="text" placeholder="Name" id="name-${abc}" class="name-handle" />
+							</div>
+							<div>
+								<input type="text" placeholder="handle" id="handle-${abc}" class="name-handle" />
+							</div>
 						</div>
 						<div>
-							<input type="text" placeholder="handle" id="handle-${abc}" class="name-handle" />
+							<textarea rows="5" id="content-${abc}" class="comment-box" placeholder="Your reply...."></textarea>
+							<div>
+								<button id="addreply-${abc}" class="add-btn">Submit</button>
+							</div>
 						</div>
-					</div>
-					<div>
-						<textarea rows="5" id="content-${abc}" class="comment-box" placeholder="Your reply...."></textarea>
-						<div>
-							<button id="addreply-${abc}" class="add-btn">Submit</button>
-						</div>
-					</div>
 					</li>
 					`;
 	
@@ -99,7 +99,7 @@ let renderComment = (comment) => {
 				<div style="color:rgba(0,0,0,0.3);margin-top:20px;">
 					posted ${timeAgo(comment.lastUpdated)}
 				</div>
-			</div> 
+			</div>
 			<div>
 			 ${comment.content}
 			</div>

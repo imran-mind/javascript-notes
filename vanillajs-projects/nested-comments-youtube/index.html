@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube comments</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="./app.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-likes/3.1.3/social-likes_birman.css"
+        integrity="sha512-DZ00AD+KtzkYzIccoHhdWSnDgylDxVZKGKv42/9hhQ950dmO4FF8v6Jhn3vPuP9x9JNO2CO29nl7syfB95nYZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <h1 style="width: 100%; margin: 10px;">Nested Comments</h1>
+        <div style="width: 100%; margin: 10px;">
+            <div style="display:flex;margin-bottom: 10px;">
+                <div>
+                    <input type="text" placeholder="Name" id="handle" class="name-handle" />
+                </div>
+            </div>
+
+            <div>
+                <textarea rows="5" id="comment" class="comment-box" placeholder="Add public comment..."></textarea>
+                <div>
+                    <button id="add-comment" class="add-btn">COMMENT</button>
+                </div>
+            </div>
+
+            <h2>Comments</h2>
+            <ul id="comments-list" class="comments-list"></ul>
+
+        </div>
+    </main>
+</body>
+
+</html>
