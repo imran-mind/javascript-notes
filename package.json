@@ -1,0 +1,24 @@
+{
+  "name": "javascript-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Design-Patterns.js",
+  "dependencies": {
+    "timezoner": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imran-mind/javascript-notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imran-mind/javascript-notes/issues"
+  },
+  "homepage": "https://github.com/imran-mind/javascript-notes#readme"
+}

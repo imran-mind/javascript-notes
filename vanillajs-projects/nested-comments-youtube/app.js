@@ -1,17 +1,13 @@
-
-
-
 let commentArr = new Array();
 // Fetching commentArr(if exists) from localstorage
 (()=> { 
 	let commentsString = localStorage.getItem("myCommentArr");
 	if(commentsString !== null) {
-		commentArr = JSON.parse(commentsString);
+        commentArr = JSON.parse(commentsString);
+        // console.log(JSON.parse(commentsString))
+        // commentArr = commentArr;
 		for(let i=0; i<commentArr.length; i++) {
 			commentArr[i].lastUpdated = new Date(commentArr[i].lastUpdated); // converting to Date Object
-			commentArr[i].upvotes = parseInt(commentArr[i].upvotes);	// Converting string to Int
-			commentArr[i].downvotes = parseInt(commentArr[i].downvotes); // Converting string to Int
-			commentArr[i].childrenIds = JSON.parse(commentArr[i].childrenIds); // converting string back to array form
 		}
 	}
 })();
@@ -85,14 +81,23 @@ document.addEventListener('DOMContentLoaded',(params)=>{
                 commentArr[id][type]++;
                 renderComments();
                 storeComments();
+            }else if(type === 'delete'){
+                console.log(type,abc,id);
+                const comments = document.getElementById('comments-list');
+                const comment = document.getElementById('comment-'+id);
+                commentArr = commentArr.filter(item => item.id != id);
+                comments.removeChild(comment);
+                storeComments();
+                renderComments();
             }
         }
     })
 });
 
 const addComment = (handle,comment,parent)=>{
-    const newComment = new Comment(commentArr.length,handle,comment,0,0,parent);
+    const newComment = getCommentObject(commentArr.length, handle, comment, 0, 0, parent);
     commentArr.push(newComment);
+    console.log('->newComment ',newComment)
     if(parent != null){
         commentArr[parent].childrenIds.push(commentArr.length-1);
     }
@@ -142,6 +147,10 @@ const renderComments= () =>{
 
 const renderComment = (comment)=>{
     const id = comment.id;
+    const deleteSpan = comment.parentId == null ? `<span style="cursor:pointer" class="material-icons-outlined" id="delete-${id}">
+                    delete
+                </span>` : '';
+    
     let listElem = `
         <div class="hr"><hr/></div>
         <li id="comment-${id}" style="max-width=500px;">
@@ -156,14 +165,15 @@ const renderComment = (comment)=>{
             <div style="margin-top: 7px;">${comment.content}</div>
             <div class="comment-actions">
                 ${comment.upvotes}
-                    <span style="cursor:pointer" class="material-icons" id="upvotes-${id}">
+                    <span style="cursor:pointer" class="material-icons-outlined" id="upvotes-${id}">
                         thumb_up
                     </span>
                 ${comment.downvotes}
-                    <span style="cursor:pointer" class="material-icons" id="downvotes-${id}">
+                    <span style="cursor:pointer" class="material-icons-outlined" id="downvotes-${id}">
                         thumb_down
                     </span>
                 <a href="#" role="button" id="reply-${id}">Reply</a>
+                ${deleteSpan}
             </div>`;
 
     if(comment.childrenIds.length){
@@ -178,38 +188,17 @@ const renderComment = (comment)=>{
 }
 // storing in localstorage;
 const storeComments = ()=>{
-   // Storing comments in stringified array in local storage
-	let val = "[";
-	for(let i in commentArr) {
-		val += Comment.toJSONString(commentArr[i]);
-		(i != commentArr.length - 1) ? val += "," : val += "";
-	}
-	val += "]";
-	localStorage.setItem('myCommentArr', val);
+    localStorage.setItem('myCommentArr', JSON.stringify(commentArr));
 }
-
-class Comment {
-    constructor(id,handle,content,upvotes,downvotes,parentId){
-        this.id = id;
-        this.handle = handle;
-        this.content = content;
-        this.upvotes = upvotes;
-        this.downvotes = downvotes;
-        this.parentId = parentId;
-        this.lastUpdated = new Date();
-        this.childrenIds = [];
-    }
-
-    static toJSONString(comment){
-        return `{
-            "id": "${comment.id}",
-            "handle": "${comment.handle}",
-            "content": "${comment.content}",
-            "upvotes": "${comment.upvotes}",
-            "downvotes": "${comment.downvotes}",
-            "parentId": "${comment.parentId}",
-            "lastUpdated": "${comment.lastUpdated}",
-            "childrenIds": "${JSON.stringify(comment.childrenIds)}"
-        }`;
+const getCommentObject = (id,handle,content,upvotes,downvotes,parentId)=>{
+    return {
+        "id": id,
+        "handle": handle,
+        "content": content,
+        "upvotes": upvotes,
+        "downvotes": downvotes,
+        "parentId": parentId,
+        "lastUpdated": new Date(),
+        "childrenIds": []
     }
 }
