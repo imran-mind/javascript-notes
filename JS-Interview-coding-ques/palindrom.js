@@ -6,3 +6,23 @@ function isPalindrome(str) {
 console.log(isPalindrome("level"));                   // logs 'true'
 console.log(isPalindrome("levels"));                  // logs 'false'
 console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
+
+// without reverse func , solution with stack
+function isPalindrom(word){
+    var name = [];
+    for(let i=0; i<word.length; i++){
+        name.push(word[i])
+    }
+    console.log('name',name);
+    let rword = "";
+    const len = name.length;
+    for(let i=0; i<len; i++){
+        rword += name.pop();
+    }
+    console.log('rword',rword);
+    if(word === rword){
+        return true
+    }else{
+        return false;
+    }
+}

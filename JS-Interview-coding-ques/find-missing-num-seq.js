@@ -16,3 +16,5 @@ const findMissing = (arr,n) =>{
 const arr = [1,2,3,5];
 const n = arr.length;
 findMissing(arr,n);
+
+
