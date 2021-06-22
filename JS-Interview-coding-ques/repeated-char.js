@@ -1,7 +1,7 @@
 
 const mapString = (s)=>{
     const map = {};
-    s.split('').forEach(i => {
+    s.forEach(i => {
         map[i] = map[i] + 1 || 1;
     });
 

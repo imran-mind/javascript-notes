@@ -10,9 +10,10 @@ const findPermutations = (s) =>{
     for(let i=0; i<s.length; i++){
         let char = s[i];
         let remainingChars = s.slice(0,i) + s.slice(i+1,s.length);
-        for(const permutation of findPermutations(remainingChars)){
-            // console.log(permutation)
-            permutationArr.push(char+permutation);
+        const permList = findPermutations(remainingChars);
+        console.log('permList => ',permList)
+        for(const permutation of permList){
+            permutationArr.push(char + permutation);
         }
     }
     return permutationArr;
