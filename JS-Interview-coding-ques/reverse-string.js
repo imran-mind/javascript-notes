@@ -26,6 +26,21 @@ const __reverse = (s) =>{
     return res;
 }
 
+
+const ___reverse = (s)=>{
+    let res = "";
+    for(let i=0; i<s.length; i++){
+        res = s[i] + res;
+    }
+    return res;
+}
+
+const reverseNum = (n)=>{
+    return parseInt(n.toString().split('').reverse().join(''));
+}
 // console.log(reverse('naman'));
 // console.log(_reverse('imran'));
-console.log(__reverse('imran'));
+// console.log(__reverse('imran'));
+// console.log(___reverse('rail'));
+// console.log(___reverse(1234));
+console.log(reverseNum(1234));
