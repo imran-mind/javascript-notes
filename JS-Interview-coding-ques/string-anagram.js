@@ -30,4 +30,10 @@ const anagram = (s1,s2) =>{
     return true;
 }
 
-console.log(anagram("hello world" ,"world hello"));
+const sort = (s)=> s.toLowerCase().split('').sort().join("");
+const anagramWithSorting = (s1, s2) =>{
+    return sort(s1) === sort(s2);
+}
+
+// console.log(anagram("hello world" ,"world hello"));
+console.log(anagramWithSorting("hello world" ,"world hello"));
