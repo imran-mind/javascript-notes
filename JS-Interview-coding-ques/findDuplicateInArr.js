@@ -18,4 +18,17 @@ const findDuplicate = (arr) =>{
     }
 }
 
-findDuplicate([1,2,2,3,3])
+
+const removeDuplicates = (arr)=>{
+    const map = {};
+    const outArr =[];
+    for(let i=0; i<arr.length; i++){
+        if(!map[arr[i]]){
+            map[arr[i]] = true;
+            outArr.push(arr[i]);
+        }
+    }
+    console.log(outArr);
+}
+// findDuplicate([1,2,2,3,3])
+removeDuplicates([1,2,2,3,3])

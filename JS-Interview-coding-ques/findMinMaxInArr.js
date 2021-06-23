@@ -15,4 +15,18 @@ const findMinMax = (arr)=>{
     console.log('Max -> ',max)
 }
 
-findMinMax([19,2,3,4,5,56,9])
+const sort = (arr)=>{
+    return arr.sort((a,b)=>b-a);
+}
+const findSecondLargest = (arr)=>{
+    const sortedArr = sort(arr);
+    console.log(sortedArr)
+    console.log("second largest ",sortedArr[1])
+}
+const findThirdLargest = (arr)=>{
+    const sortedArr = sort(arr);
+    console.log(sortedArr)
+    console.log("second largest ",sortedArr[2])
+}
+// findMinMax([19,2,3,4,5,56,9])
+findSecondLargest([19,2,3,4,5,56,9])

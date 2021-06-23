@@ -39,3 +39,4 @@ const _getPairsCount = (arr,sum)=>{
 
 // getPairsCount([1,2,3,4,5,6],6)
 _getPairsCount([1,2,3,4,5,6],6)
+
