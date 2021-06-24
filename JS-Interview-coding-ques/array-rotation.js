@@ -25,5 +25,21 @@ const _rotationArray = (arr,n)=>{
     return arr;
 }
 
-console.log(rotationArray([1,2,3,4,5,6],2))
-console.log(_rotationArray([1,2,3,4,5,6],2))
+/*  [1,2,3,4,5,6]
+    20%6-> 2
+    [3,4,5,6,1,2]
+*/
+const leftRotation = (arr,raotaiton)=>{
+    const n = raotaiton % arr.length;
+    const ans = arr.slice(n).concat(arr.slice(0,n));
+    console.log(ans);
+}
+const rightRotation = (arr,raotaiton)=>{
+    const n = arr.length-raotaiton;
+    const ans = arr.slice(n).concat(arr.slice(0,n));
+    console.log(ans);
+}
+// console.log(rotationArray([1,2,3,4,5,6],2))
+// console.log(_rotationArray([1,2,3,4,5,6],2))
+console.log(leftRotation([1,2,3,4,5,6],20))
+console.log(rightRotation([1,2,3,4,5,6],2))
