@@ -35,5 +35,24 @@ const anagramWithSorting = (s1, s2) =>{
     return sort(s1) === sort(s2);
 }
 
+const isAnagram = (s1,s2)=>{
+    if(s1.length !== s2.length)
+        return false;
+    const obj = charCount(s1);
+    for(const c of s2){
+        if(obj[c]){
+            obj[c]--;
+        }
+    }
+    const vals = Object.values(obj);
+    for(let i=0; i<vals.length; i++){
+        if(vals[i] !==0)
+            return false;
+    }
+    return true;
+    // console.log(obj)
+}
+
 // console.log(anagram("hello world" ,"world hello"));
-console.log(anagramWithSorting("hello world" ,"world hello"));
+// console.log(anagramWithSorting("hello world" ,"world hello"));
+console.log(isAnagram("hello" ,"llhe"));

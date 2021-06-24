@@ -5,8 +5,7 @@ const findIfDigitExists = (thisNum, digitToFind)=>{
         thisNum =  Math.floor(thisNum/10);
         if(digit === digitToFind){
             return true;
-        }
-            
+        }   
     }
     return false;
 }
