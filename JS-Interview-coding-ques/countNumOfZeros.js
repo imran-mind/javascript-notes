@@ -35,3 +35,10 @@ const __countVowels = (str)=>{
 
 __countVowels('imran shaikh khan')
 // countVowels('aeiou')
+
+var foo = 'outside';
+function logIt(){
+    console.log(foo); 
+    var foo = 'inside';
+}
+logIt();
