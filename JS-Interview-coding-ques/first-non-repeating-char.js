@@ -14,4 +14,4 @@ const firstNonRepeatChar= (str)=>{
 }
 
 
-firstNonRepeatChar('the quick brown fox jumps then quickly blow air');
+firstNonRepeatChar('abcdba');

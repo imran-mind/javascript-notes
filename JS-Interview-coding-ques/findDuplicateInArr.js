@@ -13,12 +13,22 @@ const findDuplicate = (arr) =>{
     for(const c in map){
         if(map[c] > 1){
             console.log(c)
-            return c;
+            // return c;
         }
     }
 }
 
-
+const repeatedTwiceExceptOne = arr =>{
+    const map = mapString(arr);
+    for(const c in map){
+        if(map[c] === 1){
+            console.log('repeatedTwiceExceptOne => ',c)
+            // return c;
+        }
+    }
+    
+}
+repeatedTwiceExceptOne([1, 1, 2, 2, 3, 4, 4, 5, 5]);
 const removeDuplicates = (arr)=>{
     const map = {};
     const outArr =[];
@@ -32,8 +42,8 @@ const removeDuplicates = (arr)=>{
 }
 
 
-// findDuplicate([1,2,2,3,3])
-// removeDuplicates([1,2,2,3,3])
+findDuplicate([1,2,2,3,3])
+removeDuplicates([1,2,2,3,3])
 
 const obj = [
     {id:1,name:'a'},

@@ -3,15 +3,19 @@
  O(n^2) 
 */
 const vovelsCount = (s)=>{
-    let count = 0;
+    let vowelCount = 0;
+    let consCount = 0;
     const vovels = "aeiou";
     const str = s.toLowerCase();
     for(const ch of str){
         if(vovels.includes(ch)){
-            count++;
+            vowelCount++;
+        }else{
+            consCount++;
         }
     }
-    return count;
+    console.log('vowelCount => ',vowelCount)
+    console.log('consCount => ',consCount)
 }
 
 /* 

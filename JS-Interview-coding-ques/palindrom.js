@@ -1,11 +1,8 @@
+
 function isPalindrome(str) {
     str = str.replace(/\W/g, '').toLowerCase();
     return (str == str.split('').reverse().join(''));
 }
-
-console.log(isPalindrome("level"));                   // logs 'true'
-console.log(isPalindrome("levels"));                  // logs 'false'
-console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
 
 // without reverse func , solution with stack
 function isPalindrom(word){
@@ -20,9 +17,9 @@ function isPalindrom(word){
         rword += name.pop();
     }
     console.log('rword',rword);
-    if(word === rword){
-        return true
-    }else{
-        return false;
-    }
+    return word === rword;
 }
+
+console.log(isPalindrome("level"));                   // logs 'true'
+console.log(isPalindrome("levels"));                  // logs 'false'
+console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'

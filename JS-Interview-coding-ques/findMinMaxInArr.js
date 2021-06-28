@@ -28,5 +28,5 @@ const findThirdLargest = (arr)=>{
     console.log(sortedArr)
     console.log("second largest ",sortedArr[2])
 }
-// findMinMax([19,2,3,4,5,56,9])
+findMinMax([19,2,3,4,5,56,9])
 findSecondLargest([19,2,3,4,5,56,9])
