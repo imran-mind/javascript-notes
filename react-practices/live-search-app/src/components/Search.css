@@ -1,0 +1,112 @@
+.heading{
+    font-size:30px;
+    padding:1px 0;
+    color: #444;
+    text-align: center;
+}
+
+.container{
+    margin: 3px auto;
+    width: 100;
+    max-width: 800px;
+}
+
+.search-label{
+    position: relative;
+}
+
+.container input{
+    width: 100%;
+    padding: 6px;
+    font-size: 30px;
+    font-style: italic;
+    color: #444;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search-icon{
+    position: absolute;
+    top: -10px;
+    font-size: 24px;
+    color: #555;
+    right: 18px;
+}
+
+/* Results */
+.results-container {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.result-items {
+	position: relative;
+	padding: 16px;
+	border: 1px solid #898989;
+	margin: 16px;
+	text-align: center;
+	min-width: 200px;
+	text-decoration: none;
+	box-shadow: 2px 2px 2px #898989;
+}
+
+.image-username {
+	color: coral;
+	font-size: 18px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 5px 10px;
+
+}
+
+.image {
+	width: 100%;
+	height: 200px;
+}
+
+.image-wrapper {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	height: 100%;
+	justify-content: center;
+}
+
+/*Loader*/
+.search-loading {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*Show and hide*/
+.show {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+/*Nav Links*/
+.nav-link-container {
+	margin: 20px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-link {
+	color: #555;
+	text-decoration: none;
+	border: 1px solid #898989;
+	padding: 10px 20px;
+	margin-right: 10px;
+}
+.greyed-out {
+	background: #f1f1f1;
+	opacity: 0.5;
+}
