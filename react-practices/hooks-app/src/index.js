@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import UseMemoExample from './components/UseMemoExample';
+import UseCallbackExample from './components/UseCallbackExample';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <UseMemoExample/> */}
+    <UseCallbackExample/>
   </React.StrictMode>,
   document.getElementById('root')
 );
