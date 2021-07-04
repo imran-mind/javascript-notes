@@ -141,20 +141,22 @@ class LinkedList{
     }
 
     reverseLinkedList(){
+        const list = new LinkedList();
         if(this.size === 0){
             console.log('LinkedList is empty')
         } else if(this.size === 1){
             return this.head;
         }else{
-            const list = new LinkedList();
+            
             const len = this.size;
             for(let i=0; i<len; i++){
                 const val = this.getFirst();
                 this.removeFirst();
                 list.addFirst(val);
             }
-            list.display();
+            // list.display();
         }
+        return list;
     }
 
     
@@ -177,7 +179,7 @@ class LinkedList{
             while(li < ri){
                 let left = this.getAtIndex(li);
                 let right = this.getAtIndex(ri);
-                console.log('left',left)
+                // console.log('left',left)
                 let temp = left.data;
                 left.data = right.data;
                 right.data = temp;
@@ -185,6 +187,7 @@ class LinkedList{
                 ri--;
             }
         }
+        return this;
     }
 
     middleOfLinkedList(){
@@ -269,21 +272,61 @@ class LinkedList{
         }
         this.display()
     }
+
+    /* Useing array */
+    isPalindrom(head){
+        const arr = [];
+        while(head != null){
+            arr.push(head.data);
+            head = head.next;
+        }
+        console.log(arr);
+        for(let i=0; i<arr.length/2; i++){
+            const front = arr[i];
+            const rear = arr[arr.length-i-1];
+            if(front != rear){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // double pointer approach
+    isPalindrom2(node){
+        if(!node.head || !node.head.next)
+            return true;
+
+        let li = 0;
+        let ri = this.size-1;
+
+        while(li < ri){
+            const left = node.getAtIndex(li);
+            const right = node.getAtIndex(ri);
+            if(left.data != right.data){
+                return false;
+            }
+            li++;
+            ri--;
+        }
+        return true;
+    }
 }
 
 const newList = new LinkedList();
 // newList.addLast(10);
 // newList.addLast(20);
 // newList.addLast(30);
-newList.addFirst(10);
-newList.addFirst(40);
-newList.addFirst(20);
-newList.addFirst(30);
-newList.addFirst(40);
-newList.addFirst(30);
-newList.removeDuplicatesBySet()
+newList.addLast(10);
+newList.addLast(20);
+newList.addLast(30);
+newList.addLast(20);
+newList.addLast(10);
+newList.display()
+console.log(newList.isPalindrom2(newList))
+// console.log(newList.isPalindrom(newList.head))
+// newList.removeDuplicatesBySet()
 // newList.removeDuplicates()
-const newList1 = new LinkedList();
+// const newList1 = new LinkedList();
 // newList.addLast(10);
 // newList.addLast(20);
 // newList.addLast(30);
@@ -305,4 +348,4 @@ const newList1 = new LinkedList();
 // newList.removeFirst();
 // newList.removeLast();
 // newList.removeLast();
-// newList.display();
+newList.display();
