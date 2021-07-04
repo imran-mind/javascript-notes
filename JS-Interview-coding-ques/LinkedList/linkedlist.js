@@ -251,6 +251,24 @@ class LinkedList{
         }
         console.log(this.display())
     }
+
+    removeDuplicatesBySet(){
+        let current= this.head;
+        let prev = null;
+        let set = new Set();
+        while(current != null){
+            const val = current.data;
+            if(set.has(val)){
+                prev.next = current.next;
+                this.size--;
+            }else{
+                set.add(val);
+                prev = current;
+            }
+            current = current.next;
+        }
+        this.display()
+    }
 }
 
 const newList = new LinkedList();
@@ -258,11 +276,13 @@ const newList = new LinkedList();
 // newList.addLast(20);
 // newList.addLast(30);
 newList.addFirst(10);
+newList.addFirst(40);
 newList.addFirst(20);
 newList.addFirst(30);
 newList.addFirst(40);
 newList.addFirst(30);
-newList.removeDuplicates()
+newList.removeDuplicatesBySet()
+// newList.removeDuplicates()
 const newList1 = new LinkedList();
 // newList.addLast(10);
 // newList.addLast(20);
