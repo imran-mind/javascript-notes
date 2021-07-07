@@ -5,12 +5,18 @@ import App from './App';
 import UseMemoExample from './components/UseMemoExample';
 import UseCallbackExample from './components/UseCallbackExample';
 import * as serviceWorker from './serviceWorker';
+import ErrorBoundary from './ErrorBoundary';
+import BuggyCounter from './components/BuggyCounter';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <UseMemoExample/> */}
-    <UseCallbackExample/>
+    <ErrorBoundary>
+      {/* <UseCallbackExample/> */}
+      {/* <BuggyCounter/> */}
+      <App/>
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );

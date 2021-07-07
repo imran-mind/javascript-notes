@@ -10,13 +10,11 @@ useEffect
 useState
 Redux with hooks setup and full understanding
 */
-export const SongList = React.memo(({songs}) =>{
-    
+const SongList = React.memo(({songs}) =>{
     useEffect(() => {
-        console.log('useEffect for count')
+        console.log('useEffect for SongList')
     },[])
 
-    
     return (
         <div className='song-list'>
             {console.log('rendering for songs')}
@@ -30,3 +28,5 @@ export const SongList = React.memo(({songs}) =>{
 },(prevProps,nextProps)=>{
     
 })
+
+export default SongList;

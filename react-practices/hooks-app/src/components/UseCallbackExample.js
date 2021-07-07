@@ -7,9 +7,13 @@ export default function UseCallbackExample(){
     const [name,setName] = useState('');
 
     const increment = useCallback(() =>{
-        setNumber(prevNum => prevNum+1);
+        if(number > 3){
+            throw new Error('I crashed')
+        }else{
+            setNumber(prevNum => prevNum+1);
+        }
     },[number]);
-       
+
     return(
         <div style={{'margin':'20px'}}>
             <h2>Counter</h2>
