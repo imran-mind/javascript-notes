@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import BookContextProvider from './context/BookContext';
 
 ReactDOM.render(
-    <App />,
+    <BookContextProvider>
+      <App />
+    </BookContextProvider>,
   document.getElementById('root')
 );
 

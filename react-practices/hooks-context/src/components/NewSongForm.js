@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
 
-export const NewSongForm = ({addSong}) => {
+export const NewSongForm = ({addBook}) => {
     const [title, setTitle] = useState('');
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(title);
-        addSong(title);
+        addBook(title);
         setTitle('');
     }
     return(
         <form onSubmit={handleSubmit}>
-            <label>Add New song : </label>
+            <label>Add New Book : </label>
             <input type="text" value={title} required onChange={(e)=> setTitle(e.target.value)}/>
-            <input type="submit" value="add song"/>
+            <input type="submit" value="add books"/>
         </form>
     )
 }
