@@ -12,19 +12,8 @@ code {
     monospace;
 }
 
-ul li {
-  border-top: 1px solid gray;
-  width: 400px;
-  padding: 10px;
-  list-style: none;
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
-form{
-  padding: 10px;
-  margin-left: 2rem;
-}
-.custome-hook{
-  margin-top: 100px;
-  margin-left: 100px;
-}
-

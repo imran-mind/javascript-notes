@@ -11,20 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-ul li {
-  border-top: 1px solid gray;
-  width: 400px;
-  padding: 10px;
-  list-style: none;
-}
-
-form{
-  padding: 10px;
-  margin-left: 2rem;
-}
-.custome-hook{
-  margin-top: 100px;
-  margin-left: 100px;
-}
-

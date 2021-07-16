@@ -7,6 +7,8 @@ import UseCallbackExample from './components/UseCallbackExample';
 import * as serviceWorker from './serviceWorker';
 import ErrorBoundary from './ErrorBoundary';
 import BuggyCounter from './components/BuggyCounter';
+import CustomeHooks from './components/customeHook';
+import User from './components/User';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +17,9 @@ ReactDOM.render(
     <ErrorBoundary>
       {/* <UseCallbackExample/> */}
       {/* <BuggyCounter/> */}
-      <App/>
+      {/* <App/> */}
+      <CustomeHooks/>
+      <User/>
     </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
