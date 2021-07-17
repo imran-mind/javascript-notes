@@ -1,0 +1,82 @@
+<html>
+<!-- 
+ -->
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+
+<style>
+    #div1 {
+        width: 70%;
+        float: left;
+        background-color: goldenrod;
+    }
+
+    #div2 {
+        width: 30%;
+        float: right;
+        background-color: pink;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    @media screen and (max-width:768px) {
+        #div1 {
+            width: 50%;
+        }
+
+        #div2 {
+            width: 50%;
+        }
+    }
+
+    @media screen and (min-width:320px) and (max-width: 400px) {
+        #div1 {
+            width: 100%;
+        }
+
+        #div2 {
+            width: 100%;
+        }
+    }
+
+    img {
+        /* width: 80%;
+        height: auto;
+        object-fit: cover; */
+    }
+</style>
+
+<body>
+    <div>
+
+        <div id="div1">
+            <h1>Div 1</h1>
+        </div>
+        <div id="div2">
+            <h1>Div 1</h1>
+        </div>
+        <img class="pure-img" src="./img2.jpg" />
+        <img class="pure-img" src="./img1.jpg" />
+        <img class="pure-img" src="./img3.jpg" />
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+    There are 4 positions
+    static
+    relative
+    fixed
+    absolute
+ -->

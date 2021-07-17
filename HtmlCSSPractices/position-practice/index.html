@@ -1,0 +1,110 @@
+<html>
+<!-- 
+
+position:relative
+    jab kisi element per hum relative position ko apply karte he let say <div> per 
+    to ye apni place ko nahi chhodta, aur apni hi position se ye left,right,bottom,top 
+    per shift hota he
+    
+
+position:absolute
+    ye totaly apne parent wale element per depend karta he ,yadi iska parent positioned ho
+    (iska matlab usme position:relative,absolute ya fixed) ho ye apni movment ko uske 
+    nearest parent ke according shift karnga, 
+
+    yadi kisi element ko hamne position abolute de di, aur uska nearest element positioned 
+    nahi he to wo body se movement start karega 
+
+    aur ye position:absolute me ye element apni jagah ko chhod deta he
+    aur uski place per dusra element shift ho jata he
+
+    
+position:fixed
+    isme element ki position fixed hoti yadi hum top,right,botto,left jaha per bhi us
+    element ko fix karna chahte he, scroll karne per bhi wo element move nahi karta
+    example, headr, chat box
+ -->
+
+<head>
+    <title>Position</title>
+</head>
+
+<style>
+    body {
+        height: 1000px;
+        /* 9229788641 */
+    }
+
+    #parent {
+        border: 1px solid red;
+        padding: 20px;
+        width: 50%;
+        margin: 100px;
+        /* position: relative; */
+    }
+
+    #one {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        display: inline-block;
+
+    }
+
+    #two {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        display: inline-block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        /* top: 0px  */
+        /* position: relative;
+        top: 50px;
+        left: 50px; */
+    }
+
+    #three {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        display: inline-block;
+    }
+
+    .display {
+        border: 1px solid black;
+        height: 100px;
+        width: 50%;
+        display: inline-block;
+    }
+
+    #div1 {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- <div id="parent">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div> -->
+    </div>
+    <div class="display" id="div1">
+        div 1
+    </div>
+    <div class="display">
+        div 2
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+    There are 4 positions
+    static
+    relative
+    fixed
+    absolute
+ -->
