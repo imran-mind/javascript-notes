@@ -14,6 +14,15 @@ const ParentComponent = () =>{
     const incrementSalary = useCallback(() =>{
         setSalary((prevSalary)=> prevSalary+10000);
     },[salary]);
+    // const incrementAge = () =>{
+    //     console.log('incrementAge func')
+    //     setAge((prevAge)=> prevAge+1);
+    // }
+
+    // const incrementSalary = () =>{
+    //     console.log('incrementSalary func')
+    //     setSalary((prevSalary)=> prevSalary+10000);
+    // }
     return(
         <div>
             <Title/>

@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-
+// Dank Mono', 'Menlo'
 export const TH = styled.th`
     padding: 0.75em;
     height: 100%;

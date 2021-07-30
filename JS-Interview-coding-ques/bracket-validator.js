@@ -27,8 +27,10 @@ const isBalancedByStack = (input)=>{
     return stack.length === 0;
 }
 
-console.log(isBalancedByStack("{[<]}"))
+console.log(isBalancedByStack("{[<>]}"))
+// ["}", "]", ">"]
 
+// ">" !== "]"
 const isValid = (s)=>{
     const map = {
         "[":"]",

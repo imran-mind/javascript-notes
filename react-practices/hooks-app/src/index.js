@@ -9,18 +9,22 @@ import ErrorBoundary from './ErrorBoundary';
 import BuggyCounter from './components/BuggyCounter';
 import CustomeHooks from './components/customeHook';
 import User from './components/User';
+import TestCustomeHook from './components/TestCustomeHook';
+import NewComp from './components/NewComp';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <UseMemoExample/> */}
-    <ErrorBoundary>
+    {/* <ErrorBoundary> */}
       {/* <UseCallbackExample/> */}
       {/* <BuggyCounter/> */}
       {/* <App/> */}
-      <CustomeHooks/>
-      <User/>
-    </ErrorBoundary>
+      {/* <CustomeHooks/> */}
+      {/* <User/> */}
+    {/* </ErrorBoundary> */}
+    {/* <TestCustomeHook/> */}
+    <NewComp/>
   </React.StrictMode>,
   document.getElementById('root')
 );

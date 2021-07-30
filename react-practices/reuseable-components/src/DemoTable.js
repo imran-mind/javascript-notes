@@ -21,7 +21,6 @@ function DemoTable() {
           Country:"India",
           Age: "3",
         },
-        
       ];
   return (
     <div className="App">

@@ -29,15 +29,13 @@
         let result =[];
         for(let i=0; i<arr.length; i++){
             if(map[arr[i]]){
-                result.push([map[arr[i]],arr[i]]);
+                result.push([map[arr[i]], arr[i]]);
             }else{
                 map[sum-arr[i]] = arr[i];
             }
         }
         console.log('result => ',result);
     }
-
-
 
     getPairsCount([1,2,3,4,5,6,-4],6)
     _getPairsCount([1,2,3,4,5,-5,6],6)
@@ -78,6 +76,28 @@ const findSumZeroTwoPointerApproach = (arr,sum)=>{
     return [];
 }
 
+
+var arr1 = [-1,0,1,2,3,5,5,6,7,10,11];
+
+
+var findPairTwoPointerApproach = (arr,sum=10) =>{
+    let left = 0;
+    let right = arr.length-1;
+    const pair = [];
+    while(left < right){
+        const total = arr[left] + arr[right];
+        if(total === sum){
+            pair.push([arr[left] ,arr[right]]);
+            left++;
+            right++;
+        }else if(total > sum){
+            right --;
+        }else{
+            left ++;
+        }
+    }
+    console.log(pair)
+}
 const findZeroByMap = (arr, sum) =>{
     const map = {};
     for(let i=0; i<arr.length; i++){

@@ -13,7 +13,7 @@ Array.prototype.ourMap = function(callback) {
       arr.push(callback(this[i], i, this)) // pushing currentValue, index, array
     }
     return arr // finally returning the array
-  }
+}
   const mapThoseAlbums = logicAlbums.ourMap(function(album) {
     return album;
   })
