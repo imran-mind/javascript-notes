@@ -1,0 +1,111 @@
+*{
+  font-family: system-ui;
+}
+body {
+  background-color: cornflowerblue;
+}
+.app {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.delete_btn{
+  color:red;
+  font-weight: 600;
+  cursor: pointer;
+}
+.input_text>form>input{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: larger;
+  font-weight: 600;
+  outline: none;
+  width: 23rem;
+}
+.todo_list {
+  margin: 1rem;
+  width: 28rem;
+  border-collapse: collapse;
+}
+.todo_list td, table.todo_list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.todo_list tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.todo_list th{
+  padding-top:12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #03D;
+  color: white;
+}
+
+.todo_list tr:hover{
+  background-color: #ddd
+}
+.todo_list>table>thead>tr{
+  padding:1rem;
+  border: 1px solid gray
+}
+.header{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: .5rem;
+}
+.todos_not_found{
+  display:flex;
+  justify-content: center;
+  align-items:center
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:412px){
+  .input_text>form>input{
+    width: 85%
+  }
+  .todo_list {
+    /* margin: 1rem; */
+    border-collapse: collapse;
+    width: 86%;
+  }
+}
