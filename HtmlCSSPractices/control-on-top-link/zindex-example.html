@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Z index</title>
+    <style>
+        #div-1 {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #div-2 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            top: 50px;
+            left: -50px;
+            z-index: 0;
+        }
+
+        #div-3 {
+            background-color: purple;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            top: 100px;
+            left: -100px;
+            z-index: 1;
+        }
+
+        #parent {
+            display: flex;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="div-1">div 1</div>
+        <div id="div-2">div 1</div>
+        <div id="div-3">div 1</div>
+    </div>
+</body>
+
+</html>
