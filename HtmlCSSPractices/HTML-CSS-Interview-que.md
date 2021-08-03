@@ -7,7 +7,7 @@
   <span>
 ```
 
--What are self closing tag
+- What are self closing tag
 ```html
 <area />
 <base />
