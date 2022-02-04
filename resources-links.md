@@ -13,3 +13,9 @@ Well Explained JWT Token https://www.youtube.com/watch?v=894seNhONF8
 Lydia Hallie JS Interview Questions
 
 https://github.com/lydiahallie/javascript-questions/blob/master/en-EN/README.md
+
+**Resume links**
+https://code.likeagirl.io/resumes-that-made-it-into-faang-f7de9b0c4396
+
+**Planning for cracking coding interview**
+https://towardsdatascience.com/the-one-year-plan-for-competitive-coding-6af53f2f719c
