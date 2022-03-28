@@ -56,3 +56,27 @@ const isAnagram = (s1,s2)=>{
 // console.log(anagram("hello world" ,"world hello"));
 // console.log(anagramWithSorting("hello world" ,"world hello"));
 console.log(isAnagram("hello" ,"llhe"));
+
+
+
+// better approach
+// TC => O(n)
+// SC => O(1)
+const isAnagram1 = (s1,s2)=>{
+    const CHAR = 256;
+    const charArr = new Array(CHAR).fill(0);
+    if(s1.length !== s2.length)
+        return false;
+
+    for(let i=0; i<s1.length; i++){
+        charArr[s1.charCodeAt(i)]++;
+        charArr[s2.charCodeAt(i)]--;
+    }
+    for(let i=0; i<CHAR; i++){
+        if(charArr[i] !== 0)
+            return false;
+    }
+    return true;
+}
+
+console.log(isAnagram1("silent","listen"))
