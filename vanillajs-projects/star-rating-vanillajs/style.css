@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+}
+
+.stcomp {
+  display: flex;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.star {
+  display: inline-block;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background: lightgray;
+  height: 50px;
+  width: 50px;
+  margin-left: 2px;
+  transition: transform 0.1s;
+}
+.star-filled {
+  background: orange;
+}
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star:focus {
+  transform: scale(1.2);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
