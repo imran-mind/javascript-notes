@@ -1,0 +1,217 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.material-icons.icon-gray-color { color: #54646F; }
+
+.user-header{
+    background-color: #EFF2F5;
+    height: 59px;
+    width: 100%;
+    padding: 10px 16px
+}
+.status-icon{
+    font-size: 1.5rem !important;
+}
+.main-app{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.top{
+    height: 12.5vh;
+    background-color: #00A884;
+}
+.bottom{
+    height: 90vh;
+    background-color: #E2E1DD;
+}
+
+.app-wrapper{
+    position: absolute;
+    top: 1.2rem;
+    left: 5rem;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin-right: auto; */
+    height: 96vh;
+    width: 91%;
+    background-color: white;
+    z-index: 1;
+     /* margin: 1rem; */
+}
+.app-container{
+    display: flex;
+}
+
+.left-wrapper{
+    width: 30%;
+    height: 95vh;
+    /* border: 1px solid black; */
+}
+
+.right-wrapper{
+    width: 70%;
+    height: 95vh;
+    /* border: 1px solid black; */
+}
+
+.user-avatar > img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.user-option{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-message{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.chat-status{
+    padding: 10px;
+}
+
+.chat-option{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.user-search{
+    width: 100%;
+    height: 49px;
+    background-color: white;
+    border-bottom: 0.6px solid lightgray;
+    border-right: 0.6px solid lightgray;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-input{
+    width: 78%;
+    background-color: white;
+    padding: 0px 10px;
+    margin-left: 47px;
+}
+.user-input > input{
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    background-color: #EFF2F5;
+    border-bottom-right-radius: 10px;
+    padding-left: 15px;
+}
+
+.chat-search{
+    position: absolute;
+    top: 66px;
+    left: 24px;
+    background-color: #EFF2F5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 13px;
+}
+.search-icon{
+    font-size: 20px !important;
+}
+.chat-sort{
+    margin-right: 10px;
+}
+
+.user-img{
+    margin: 10px;
+}
+.user-img > img{
+    height: 58px;
+    width: 58px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.user-card{
+    display: flex;
+    align-items: center;
+}
+.user-right-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 11px;
+    padding-bottom: 21px;
+    border-bottom: 0.6px solid lightgray;
+}
+
+.user-time{
+    color: #667681;
+    margin-right: 20px;
+}
+.user-message{
+    color: #667681;
+    margin-top: 2px;
+}
+.user-list{
+    border-right: 0.6px solid lightgray;
+    height: 96vh;
+    overflow-y: auto;
+    z-index: 999;
+}
+@media only screen and (max-width:1400px)  {
+    .main-app{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    .app-wrapper{
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        border: 1px solid black;
+    }
+}
