@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+}
+top-wrapper {
+  width: 100%;
+  display: flex;
+}
+#grid-wrapper {
+  margin-top: 4rem;
+}
+.rows {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: 0.5px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.color {
+  background-color: lightseagreen;
+  color: white;
+  border: 0.5px solid black;
+}
+
+.option-type {
+  display: flex;
+  padding: 0px 10px;
+}
+
+.option-wrapper {
+  display: flex;
+}
+
+.input-wrapper {
+  display: flex;
+}
+input[name="gridSize"] {
+  margin: 0 10px;
+}
+.top-wrapper {
+  display: flex;
+}
