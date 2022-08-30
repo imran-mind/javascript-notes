@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: interface, "Helvetica Neue", helvetica, sans-serif;
+}
+.action-btns{
+    display: flex;
+    margin-left: 1em;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.material-icons.icon-gray-color { color: #54646F; }
+
+.app-wrapper{
+    background-color: black;
+    width: 100%;
+    /* height: 100vh; */
+    color:white
+}
+
+.main-app{
+    width: 58%;
+    margin: auto;
+    height: inherit;
+    /* border: 1px solid white; */
+}
+.app-header{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0px 12px;
+    padding-top: 1rem;
+}
+
+.nav-bar{
+   list-style:none;
+   display: flex;
+   margin: 0px;
+   background: linear-gradient(to right, rgb(0, 204, 255), rgb(153, 51, 255) 31%, rgb(230, 70, 182) 52%, rgb(255, 249, 170) 77%, rgb(0, 255, 153), rgb(0, 204, 255)) 0% 50% / 200% 50%;
+   display: flex;
+   justify-content: space-around;
+   transform: translateZ(0px);
+}
+
+
+.nav-item{
+    font-size: 16px;
+    margin: 10px;
+    padding: 0px 14px;
+    cursor: pointer;
+}
+
+.header-right{
+    display: flex;
+}
+
+.user-login{
+    margin-left: 1rem;
+}
+.upload-btn{
+    width: 80px;
+    height: 38px;
+    font-weight: 600;
+    background-color: #734CFE;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    margin-right: 1rem;
+}
+
+.create-btn{
+    width: 80px;
+    height: 38px;
+    font-weight: 600;
+    background-color: #9039FE;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.login-btn{
+    width: 121px;
+    height: 38px;
+    background-color: #3E3E3E;
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+.app-search{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.app-search > input{
+    width: 100%;
+    height: 50px;
+    font-size: 19px;
+    outline: none;
+    border: none;
+    padding: 14px;
+}
+
+.app-search > button{
+    background-color: #3E3E3E;
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.img-card{
+    width: auto;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+.img-card :hover{
+    /* height: 300px; */
+}
+.image-list{
+    overflow-y: auto;
+}
+/* .img-on-hover:hover{
+    visibility:visible;
+} */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    font-size: 20px;
+}
+.show{
+    opacity: 1;
+}
+.hover-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.img-on-hover-show{
+    position: absolute;
+    width: 200px;
+    border: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 20px;
+}
+.img-on-hover-hide{
+    position: absolute;
+    width: 185px;
+    border: 10;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 5px;
+}
+
+.label-img{
+    width: 30px;
+    height: 30px;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.app-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+}
