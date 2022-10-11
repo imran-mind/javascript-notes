@@ -1,0 +1,44 @@
+
+//-----------------------------Functional Prototype-------------------------------------------------//
+function Person(name){
+    this.name = name;
+}
+
+Person.prototype.getName = function(){
+    return console.log(`person name is ${this.name}`)
+}
+
+function Emoloyee(name, age,department){
+    Person.call(this, name);
+    this.age = age;
+    this.department = department;
+}
+
+Object.setPrototypeOf(Emoloyee.prototype, Person.prototype); //child , parent
+
+const e = new Emoloyee('imran',20, 'IT');
+e.getName();
+console.log(e.name);
+
+
+
+
+//--------------------------Obect prototype dunder proto----------------------------------------------------//
+
+let car ={
+    name: 'audi'
+}
+
+let audi={
+    model: 2012,
+    color: 'red'
+}
+
+audi.__proto__ = car; //car is parent and audi child
+
+console.log(audi)
+
+
+
+
+
