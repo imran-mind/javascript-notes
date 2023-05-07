@@ -1,13 +1,13 @@
 import './App.css';
-import About from './About';
-import Home from './Home';
+import Parent from './components/Parent';
 
 function App() {
   return (
     <div className="App">
       <h1>HOC example</h1>
-      <Home/>
-      <About/>
+      {/* <Home label="home-label"/>
+      <About label="about-label"/>  */}
+      <Parent/>
     </div>
   );
 }
