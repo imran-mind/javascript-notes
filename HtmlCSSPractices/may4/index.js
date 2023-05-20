@@ -103,3 +103,16 @@ createMealContainer();
 createMealContainer();
 createMealContainer();
 createMealContainer();
+
+
+
+const btn = document.getElementById('mybtn');
+var clickHandler = {
+	message: 'click event handler',
+	handleClick: function(event) {
+		console.log(this.message);
+	}
+};
+
+// Add click event to btn and bind the clickHandler object
+btn.addEventListener('click', clickHandler.handleClick.bind(clickHandler));
