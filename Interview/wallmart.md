@@ -1,3 +1,4 @@
+---------------------------------------1st round DS & Algo -----------------------------------
 // const sort = (arr)=>{
 //     const evenArr = [];
 //     const oddArr = [];
@@ -63,3 +64,29 @@ const checkPalindromWithTwoStr = (s1, s2) =>{
 // ab mrrm ba
 
 //
+
+
+---------------------------------------2nd round React & Node and Js -----------------------------------
+
+// create image viewer app in react
+// Preview done
+// list of thumbnails done
+/// user can select image from thumbnail done
+https://github.com/imran-mind/walmart-react
+
+1. What is synthetic event and whey React uses it.
+2. what is the use of Key in React list
+3. what is Event Delegation
+4. what is event capturing and bubbling
+5. what is memoization and how to use in React.
+6. what is the diff b/w async and differ
+7. how to improve page loading in react
+8. what is cache
+9. How to know server side cache is added or not
+10. what is prefetch and reconnect in network call
+11. what all tools you used for monitoring
+12. why we use alt in img tag
+13. what is dns and how it works
+14. how you will multiple apis in nodejs at once-> Promise.all or Promise.allSettled
+15. what is Reconsiliation in React.
+16. How virtual dom works
