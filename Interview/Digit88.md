@@ -19,3 +19,21 @@
 -> what is the diff b/w POST and PUT
 -> how you handle failure mechanism of microservice (by using notification system)
 -> Asked the rendom num program (where i got stuck) [ arr has 4 length so if i call random() 4 times then unique element should print
+
+let arr = ['a', 'b', 'c', 'd'];
+let counter = 0;
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function random() {
+    let n = arr.length;
+    let randomIndex = getRandomInt(n);
+    console.log(arr[randomIndex])
+    counter++;
+}
+random(); //b
+random(); //c
+random(); //a
+random(); //d
