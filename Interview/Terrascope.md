@@ -1,12 +1,12 @@
 
 -------------------------------frontend-----------------------------
-how useMemo and useCallback works
-can we write the same thing in useEffect(()=>{},[count]), what we write in useMemo(()=>{},[count])
-how to create custom hooks
-how we can add a css for keyboard enter button
-what is the diff b/w justify-content and align-items in flex?
+1. how useMemo and useCallback works
+2. can we write the same thing in useEffect(()=>{},[count]), what we write in useMemo(()=>{},[count])
+3. how to create custom hooks
+4. how we can add a css for keyboard enter button
+5. what is the diff b/w justify-content and align-items in flex?
 
-const input = {
+```jsconst input = {
     "a": {
         "b": {
             "c": 1
@@ -47,7 +47,7 @@ const flatObject = (input, parentKey='')=>{
 }
 
 console.log(flatObject(input));
-
+```
 -----------------------------------------backend------------------------------------------------
 1. how ec2 instance auto scal - vertical scaling and horizontal scaling
 2. How mongodb scaling works
