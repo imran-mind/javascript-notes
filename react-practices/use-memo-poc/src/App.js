@@ -1,7 +1,8 @@
-import React, { useState,useMemo } from "react";
+import React, { useState,useMemo, useEffect } from "react";
 
 function App() {
   const [count,setCount] = useState(0);
+  // const [calculation,setCalculation] = useState(0);
   const [todos, setTodos] = useState([]);
 
   const addTodo = () =>{
@@ -10,6 +11,14 @@ function App() {
     setTodos(copyTodos);
   }
 
+  //useMemo function returns the memoized value
+  //useMemo is used for optimizing the app performance, because it memoize the result of the function for the same value
+  // in useMemo it takes function as first args and depedency arr as second arg
+  // when we pass second parameter arr empty then this useMemo callback func runs only once during rendering time.
+  // when we pass second parameter arr with some state then useMemo callback func will runs everytime whenever this state
+  // value will changes.
+  //when we don't pass second parameter as arr then it this useMemo callback func runs
+  //everytime during rerendring phase but not after render but during the rendering process itself
   const calculation = useMemo(()=> expensiveCalculation(count), [count]);
 
   const increment = ()=>{
