@@ -113,7 +113,6 @@ const brackedValidator = (str )=>{
     1. rollback 2. consistency.
 
 5. what is the production issue you solved in the backend?
-6. How to write operations will happen with replicas in Mongo.
+6. How write operations will happen with replicas in Mongo.
 7. what all design patterns do you know
 8. What is generics in TypeScript
-9. 
