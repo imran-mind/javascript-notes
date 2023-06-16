@@ -8,15 +8,15 @@
 
 
 =========================Frontend=======================
-//design a product list app using Vanialljs
-//atomic design
-//design system
-//IBM carbon design system
-//google has a material design system
-//12 Factor app
-//namespacing
-//Accessibility guidelines
-//multi repo and mono repo
-//web vitals
-// how to structure div in 3 columns flex or grid
-//how do you test an API call in frontend
+1. Design a product list app using Vanialljs
+2. atomic design
+3. design system
+4. IBM carbon design system
+5. google has a material design system
+6. 12 Factor app
+7. namespacing
+8. Accessibility guidelines
+9. multi repo and mono repo
+10. web vitals
+11. how to structure div in 3 columns flex or grid
+12. how do you test an API call in frontend
