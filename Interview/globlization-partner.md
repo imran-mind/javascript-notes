@@ -40,6 +40,7 @@ Managarial Round with Mateusz Borowski
 // Output: 5
 // Explanation: The answer is “bcadw”, with the length of 5.
 
+``
 function substr(str){ //[a,b,c,a,b,c,b,b]
     let ans = 0;
     let left=0; //left=0;
@@ -62,3 +63,5 @@ function substr(str){ //[a,b,c,a,b,c,b,b]
 }
 
 console.log(substr("bbbb"));
+``
+
