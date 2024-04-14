@@ -34,28 +34,39 @@ const t3 = () =>{
 // First failed reject will come in to catch block
 
 
-function myPromise(arr){
-    let promiseCount = 0;
-    let result = [];
-    return new Promise((resolve,reject) => {
-        arr.forEach((promise,index)=>{
-            promise.then((response)=>{
-                result[index] = response;
-                promiseCount = promiseCount + 1;
 
-                //if all promsie resolved then return the result arr
-                if(promiseCount === arr.length)
+Promise.myPromiseAll = function (promises) {
+
+    return new Promise((resolve, reject) => {
+        if (!Array.isArray(promises)) {
+            reject(new Error('promises arguments must be an array'));
+            return;
+        }
+        const result = [];
+        let promiseCount = 0;
+        const n = promises.length
+        if (n === 0) {
+            resolve(result);
+            return;
+        }
+        promises.forEach(async (promiseFunc, index) => {
+            try {
+                const res = await promiseFunc;
+                result[index] = res;
+                promiseCount = promiseCount + 1;
+                console.log(promiseCount);
+                if (promiseCount === n)
                     resolve(result);
-            }).catch((err)=>{
+            } catch (err) {
                 reject(err);
-            })
+            }
         })
     })
 }
 
-myPromise([t1(),t2(),t3()])
-    .then((result)=>{
-        console.log(result);
-    }).catch((err)=>{
-        console.log(err);
-    });
+Promise.myPromiseAll([t1(), t3()])
+    .then(result => {
+        console.log(result)
+    }).catch(err => {
+        console.log('Error: ', err);
+    })
