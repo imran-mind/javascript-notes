@@ -24,17 +24,11 @@ class LRUCache{
             const value = this.map.get(key);
             this.map.delete(key)
             this.map.set(key, value);
+            return value;
         }
         return null;
     }
 
-    use(key){
-        if(this.map.has(key)){
-            const value = this.map.get(key);
-            this.map.delete(key);
-            this.map.set(key, value);
-        }
-    }
 
     clear(){
         this.map.clear()
